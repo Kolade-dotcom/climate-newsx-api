@@ -118,11 +118,11 @@ app.get('/', (req, res) => {
     res.status(200).send('Welcome to My Climate News API')
 })
 
-app.get("/newsX", (req, res) => {
+app.get("/newsx", (req, res) => {
     res.status(200).json(articles)
 })
 
-app.get('/newsX/:newspaperId', (req, res) => {
+app.get('/newsx/:newspaperId', (req, res) => {
     const { newspaperId } = req.params
 
     const newspaperAddress = newspapers.filter(newspaper => newspaper.name === newspaperId)[0].address
@@ -151,4 +151,4 @@ app.get('/newsX/:newspaperId', (req, res) => {
         });
 })
 
-app.listen(POST, () => console.log(`server running on PORT localhost:${POST}`))
+app.listen(POST, () => console.log(`server running on PORT http://localhost:${POST}`))
